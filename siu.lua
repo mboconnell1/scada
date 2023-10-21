@@ -16,7 +16,7 @@ local function yellow() term.setTextColor(colors.yellow) end
 local function green() term.setTextColor(colors.green) end
 local function blue() term.setTextColor(colors.blue) end
 local function white() term.setTextColor(colors.white) end
-local function lgray() term.setTextColor(colors.lgray) end
+local function lgray() term.setTextColor(colors.lightGray) end
 
 -- Get value of option
 local function get_opt(opt, options)
