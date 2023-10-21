@@ -5,7 +5,7 @@ local SIU_VERSION = "v1.00a"
 
 local install_dir = "/.install-cache"
 local repo_path = "http://raw.githubusercontent.com/mboconnell1/scada/main/"
-local install_manifest = "https://github.brandonoconnell.dev/scada/install_manifest.json"
+local install_manifest = repo_path .. "install_manifest.json"
 
 local opts = { ... }
 local mode, app, target
@@ -88,4 +88,5 @@ end
 -- Run selected mode
 if mode == "check" then
     local ok, manifest = get_remote_manifest()
+    if not ok then return end
 end
