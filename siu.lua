@@ -1,20 +1,3 @@
---[[
-SCADA Installation Utility
-
-Copyright (c) 2023 Brandon O'Connell
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
-associated documentation files (the "Software"), to deal in the Software without restriction,
-including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
-and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
-LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-]]--
-
 local function println(message) print(tostring(message)) end
 local function print(message) term.write(tostring(message)) end
 
@@ -58,3 +41,18 @@ end
 
 -- Get and validate command line options
 println("-- SCADA Installation Utility " .. SIU_VERSION .. " --")
+
+if #opts == 0 or opts[1] == "help" then
+    println("usage: siu <mode> <app>")
+    println("<mode>")
+    lgray()
+    println(" check       - check latest versions avilable")
+    yellow()
+    println("               siu check")
+    lgray()
+    println(" install     - fresh install (overwrites config.lua)")
+    println(" update      - update existing files (preserves config.lua)")
+    println(" uninstall   - delete all files")
+    white();println("<app>");lgray()
+    return
+end
