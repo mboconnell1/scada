@@ -1,14 +1,14 @@
 {
   "versions": {
-    "installer": "v1.00a",
-    "plc": "v0.0a",
-    "rtu": "v0.0a",
-    "supervisor": "v0.0a",
-    "coordinator": "v0.0a",
-    "bootloader": "0.0a",
-    "common": "0.0a",
-    "comms": "0.0a",
-    "graphics": "0.0a",
-    "lockbox": "0.0a"
+    "installer": "v0.02a",
+    "plc": "v0.0",
+    "rtu": "v0.0",
+    "supervisor": "v0.0",
+    "coordinator": "v0.0",
+    "bootloader": "0.0.1",
+    "common": "0.0.0",
+    "comms": "0.0.0",
+    "graphics": "0.0.0",
+    "lockbox": "0.0.0"
   }
 }
